@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<groupId>com.mti</groupId>
+	<artifactId>rpg</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+    <packaging>pom</packaging>
+    <name>rpg</name>
+
+    <modules>
+        <module>utils</module>
+		<module>api</module>
+		<module>webapp</module>
+    </modules>
+
+    <properties>
+		<java.version>14</java.version>
+		<versions.project>0.0.1-SNAPSHOT</versions.project>
+	</properties>
+
+	<parent>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-starter-parent</artifactId>
+		<version>2.3.1.RELEASE</version>
+		<relativePath/> <!-- lookup parent from repository -->
+	</parent>
+
+	<dependencyManagement>
+		<dependencies>
+			<dependency>
+				<groupId>com.mti</groupId>
+				<artifactId>mediadb</artifactId>
+				<version>${versions.project}</version>
+			</dependency>
+
+
+			<dependency>
+				<groupId>com.mti</groupId>
+				<artifactId>api</artifactId>
+				<version>${versions.project}</version>
+			</dependency>
+
+
+			<dependency>
+				<groupId>com.mti</groupId>
+				<artifactId>utils</artifactId>
+				<version>${versions.project}</version>
+			</dependency>
+
+
+			<dependency>
+				<groupId>com.mti</groupId>
+				<artifactId>utils-lang</artifactId>
+				<version>${versions.project}</version>
+			</dependency>
+
+
+			<dependency>
+				<groupId>com.mti</groupId>
+				<artifactId>utils-spring</artifactId>
+				<version>${versions.project}</version>
+			</dependency>
+		</dependencies>
+	</dependencyManagement>
+
+</project>
